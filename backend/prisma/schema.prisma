@@ -1,0 +1,89 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Cedente: quem cede o recebível. O id é gerado pelo cliente (UUID) e serve
+/// como chave de idempotência nas integrações.
+model Assignor {
+  id        String    @id @db.Uuid
+  /// CPF ou CNPJ, armazenado só com dígitos.
+  document  String    @unique @db.VarChar(30)
+  email     String    @db.VarChar(140)
+  phone     String    @db.VarChar(20)
+  name      String    @db.VarChar(140)
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  payables  Payable[]
+
+  @@map("assignors")
+}
+
+/// Recebível. O valor usa DECIMAL(15,2) para não perder centavos com float.
+model Payable {
+  id           String   @id @db.Uuid
+  value        Decimal  @db.Decimal(15, 2)
+  emissionDate DateTime @map("emission_date") @db.Date
+  assignorId   String   @map("assignor_id") @db.Uuid
+  assignor     Assignor @relation(fields: [assignorId], references: [id], onDelete: Restrict)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@index([assignorId])
+  @@map("payables")
+}
+
+/// Usuários com permissão de gerar tokens (nível 5).
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  login        String   @unique @db.VarChar(60)
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+enum BatchStatus {
+  PROCESSING
+  COMPLETED
+}
+
+enum BatchItemStatus {
+  SUCCEEDED
+  FAILED
+}
+
+/// Lote de recebíveis processado de forma assíncrona (níveis 7 e 8).
+model Batch {
+  id         String      @id @default(uuid()) @db.Uuid
+  total      Int
+  succeeded  Int         @default(0)
+  failed     Int         @default(0)
+  status     BatchStatus @default(PROCESSING)
+  createdAt  DateTime    @default(now()) @map("created_at")
+  finishedAt DateTime?   @map("finished_at")
+  items      BatchItem[]
+
+  @@map("batches")
+}
+
+/// Resultado de cada item do lote. A chave composta garante que um item só
+/// seja contado uma vez, mesmo que o job seja reexecutado.
+model BatchItem {
+  batchId   String          @map("batch_id") @db.Uuid
+  payableId String          @map("payable_id") @db.Uuid
+  status    BatchItemStatus
+  attempts  Int
+  error     String?
+  createdAt DateTime        @default(now()) @map("created_at")
+  batch     Batch           @relation(fields: [batchId], references: [id], onDelete: Cascade)
+
+  @@id([batchId, payableId])
+  @@map("batch_items")
+}
