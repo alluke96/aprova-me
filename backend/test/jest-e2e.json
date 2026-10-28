@@ -1,10 +1,17 @@
 {
-  "moduleFileExtensions": ["js", "json", "ts"],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
   "rootDir": ".",
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.ts$": "ts-jest"
   },
-  "testTimeout": 60000
+  "testTimeout": 60000,
+  "setupFiles": [
+    "reflect-metadata"
+  ]
 }

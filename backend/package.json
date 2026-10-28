@@ -90,6 +90,9 @@
       "!test-utils/**"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "setupFiles": [
+      "reflect-metadata"
+    ]
   }
 }

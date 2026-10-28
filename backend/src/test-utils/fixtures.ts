@@ -31,7 +31,7 @@ export function makePayable(overrides: Partial<Payable> = {}): Payable {
 export const assignorInput = {
   id: ASSIGNOR_ID,
   document: '529.982.247-25',
-  email: 'Cedente@Empresa.com ',
+  email: 'Cedente@Empresa.com',
   phone: '(41) 99999-0000',
   name: 'Empresa Cedente LTDA',
 };
