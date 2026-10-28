@@ -42,21 +42,29 @@ jobs:
         with:
           node-version: 22
       - name: Instalar dependências
-        run: ../.github/scripts/run.sh "API: npm install" sh -c 'if [ -f package-lock.json ]; then npm ci; else npm install; fi'
+        run: |
+          ../.github/scripts/run.sh "API: npm install" sh -c 'if [ -f package-lock.json ]; then npm ci; else npm install; fi'
       - name: Gerar client do Prisma
-        run: ../.github/scripts/run.sh "API: prisma generate" npx prisma generate
+        run: |
+          ../.github/scripts/run.sh "API: prisma generate" npx prisma generate
       - name: Lint
-        run: ../.github/scripts/run.sh "API: lint" npm run lint
+        run: |
+          ../.github/scripts/run.sh "API: lint" npm run lint
       - name: Checagem de tipos
-        run: ../.github/scripts/run.sh "API: typecheck" npm run typecheck
+        run: |
+          ../.github/scripts/run.sh "API: typecheck" npm run typecheck
       - name: Testes unitários
-        run: ../.github/scripts/run.sh "API: testes unitários" npm run test:cov
+        run: |
+          ../.github/scripts/run.sh "API: testes unitários" npm run test:cov
       - name: Build
-        run: ../.github/scripts/run.sh "API: build" npm run build
+        run: |
+          ../.github/scripts/run.sh "API: build" npm run build
       - name: Migrações
-        run: ../.github/scripts/run.sh "API: migrações" npx prisma migrate deploy
+        run: |
+          ../.github/scripts/run.sh "API: migrações" npx prisma migrate deploy
       - name: Testes e2e
-        run: ../.github/scripts/run.sh "API: testes e2e" npm run test:e2e
+        run: |
+          ../.github/scripts/run.sh "API: testes e2e" npm run test:e2e
 
   docker:
     name: Imagens Docker
@@ -65,7 +73,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build da API
-        run: .github/scripts/run.sh "Docker: API" docker build -t aprova-me-api ./backend
+        run: |
+          .github/scripts/run.sh "Docker: API" docker build -t aprova-me-api ./backend
       - name: Build do front
         if: ${{ hashFiles('frontend/Dockerfile') != '' }}
-        run: .github/scripts/run.sh "Docker: front" docker build -t aprova-me-web ./frontend
+        run: |
+          .github/scripts/run.sh "Docker: front" docker build -t aprova-me-web ./frontend
