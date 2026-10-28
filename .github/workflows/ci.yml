@@ -96,6 +96,25 @@ jobs:
         run: |
           ../.github/scripts/run.sh "Front: build" npm run build
 
+  infra:
+    name: Terraform (fmt e validate)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra/terraform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: Formatação
+        run: |
+          ../../.github/scripts/run.sh "Terraform: fmt" terraform fmt -check -recursive -diff
+      - name: Init
+        run: |
+          ../../.github/scripts/run.sh "Terraform: init" terraform init -backend=false
+      - name: Validate
+        run: |
+          ../../.github/scripts/run.sh "Terraform: validate" terraform validate
+
   docker:
     name: Imagens Docker
     runs-on: ubuntu-latest

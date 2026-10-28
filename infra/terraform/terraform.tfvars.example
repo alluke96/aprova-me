@@ -1,0 +1,14 @@
+# Copie para terraform.tfvars e ajuste.
+aws_region        = "sa-east-1"
+environment       = "prod"
+github_repository = "alluke96/aprova-me"
+
+# Certificado do ACM para HTTPS (opcional; vazio = só HTTP)
+certificate_arn = ""
+
+# Credenciais SMTP do Amazon SES
+smtp_user     = ""
+smtp_password = ""
+
+operations_email   = "operacoes@seudominio.com"
+batch_report_email = "cliente@seudominio.com"

@@ -1,0 +1,78 @@
+# Sobe tudo com um comando: docker compose up --build
+#   Front:           http://localhost:3000  (login aprovame / aprovame)
+#   API + Swagger:   http://localhost:3001/docs
+#   E-mails (Mailpit): http://localhost:8025
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: aprovame
+      POSTGRES_PASSWORD: aprovame
+      POSTGRES_DB: aprovame
+    ports: ['5432:5432']
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U aprovame']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    command: ['redis-server', '--appendonly', 'yes']
+    ports: ['6379:6379']
+    volumes: [redis-data:/data]
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Captura os e-mails de lote processado e de fila morta, sem mandar nada de verdade.
+  mailpit:
+    image: axllent/mailpit:latest
+    ports: ['8025:8025', '1025:1025']
+
+  api:
+    build: ./backend
+    environment: &backend-env
+      NODE_ENV: production
+      PORT: 3001
+      CORS_ORIGIN: http://localhost:3000
+      DATABASE_URL: postgresql://aprovame:aprovame@postgres:5432/aprovame?schema=public
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JWT_SECRET: troque-este-segredo-em-producao
+      JWT_EXPIRES_IN_SECONDS: 60
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      BATCH_REPORT_EMAIL: cliente@aprova.me
+      OPERATIONS_EMAIL: operacoes@aprova.me
+    ports: ['3001:3001']
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+
+  # Mesmo código da API, outro processo: consome as filas de lote.
+  worker:
+    build: ./backend
+    command: ['node', 'dist/worker.js']
+    environment: *backend-env
+    healthcheck:
+      disable: true
+    depends_on:
+      api: { condition: service_healthy }
+
+  web:
+    build: ./frontend
+    environment:
+      API_URL: http://api:3001
+      COOKIE_SECURE: 'false'
+    ports: ['3000:3000']
+    depends_on:
+      api: { condition: service_healthy }
+
+volumes:
+  postgres-data:
+  redis-data:

@@ -52,7 +52,7 @@ describe('cliente da API', () => {
       }),
     );
 
-    const error = await api('/x').catch((e: ApiError) => e);
+    const error = (await api('/x').catch((e: unknown) => e)) as ApiError;
 
     expect(error).toBeInstanceOf(ApiError);
     expect(error.status).toBe(400);

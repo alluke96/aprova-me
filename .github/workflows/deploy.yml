@@ -1,0 +1,106 @@
+name: Deploy (AWS ECS)
+
+# Roda depois do CI verde na main, ou manualmente. Fica desligado até a infra
+# existir: crie a infra com o Terraform (infra/terraform), depois configure no
+# GitHub a variável AWS_DEPLOY_ENABLED=true e o segredo AWS_DEPLOY_ROLE_ARN.
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # troca o token OIDC do GitHub por credenciais temporárias da AWS
+  contents: read
+
+env:
+  AWS_REGION: ${{ vars.AWS_REGION || 'sa-east-1' }}
+  PREFIX: ${{ vars.DEPLOY_PREFIX || 'aprova-me-prod' }}
+
+jobs:
+  deploy:
+    name: Build, push e deploy
+    if: >-
+      vars.AWS_DEPLOY_ENABLED == 'true' &&
+      (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build e push das imagens
+        id: images
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+          TAG: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          api="$REGISTRY/$PREFIX-api:$TAG"
+          web="$REGISTRY/$PREFIX-web:$TAG"
+          docker build -t "$api" ./backend
+          docker build -t "$web" ./frontend
+          docker push "$api"
+          docker push "$web"
+          echo "api=$api" >> "$GITHUB_OUTPUT"
+          echo "web=$web" >> "$GITHUB_OUTPUT"
+
+      - name: Baixar definições atuais das tarefas
+        run: |
+          for service in api worker web; do
+            aws ecs describe-task-definition --task-definition "$PREFIX-$service" \
+              --query taskDefinition > "task-$service.json"
+          done
+
+      # A API sobe primeiro: ela aplica as migrações do banco ao iniciar.
+      - id: api-task
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-api.json
+          container-name: api
+          image: ${{ steps.images.outputs.api }}
+      - uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.api-task.outputs.task-definition }}
+          cluster: ${{ env.PREFIX }}
+          service: api
+          wait-for-service-stability: true
+
+      - id: worker-task
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-worker.json
+          container-name: worker
+          image: ${{ steps.images.outputs.api }}
+      - uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.worker-task.outputs.task-definition }}
+          cluster: ${{ env.PREFIX }}
+          service: worker
+          wait-for-service-stability: true
+
+      - id: web-task
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-web.json
+          container-name: web
+          image: ${{ steps.images.outputs.web }}
+      - uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.web-task.outputs.task-definition }}
+          cluster: ${{ env.PREFIX }}
+          service: web
+          wait-for-service-stability: true
