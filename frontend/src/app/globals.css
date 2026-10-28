@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+/*
+ * Paleta "papel-moeda": tinta azul-petróleo sobre papel levemente esverdeado,
+ * com o verde da cédula reservado para dinheiro e confirmações.
+ */
+@theme {
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0e3b43;
+  --color-ink-soft: #2a5a62;
+  --color-paper: #f3f6f4;
+  --color-surface: #ffffff;
+  --color-line: #d3ddd8;
+  --color-muted: #5a6b66;
+  --color-cedula: #2f7d5b;
+  --color-cedula-tint: #e4f1ea;
+  --color-alert: #b42318;
+  --color-alert-tint: #fdecea;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: 'tnum' 1, 'cv11' 1;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cedula);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Classes reutilizáveis. No Tailwind 4, só @utility pode ser usado dentro de @apply. */
+@utility field-input {
+  @apply w-full rounded-md border border-line bg-surface px-3 py-2.5 text-[15px] text-ink placeholder:text-muted/70;
+  @apply transition-colors hover:border-ink-soft/50 focus:border-cedula focus:outline-none;
+
+  &[aria-invalid='true'] {
+    @apply border-alert bg-alert-tint/40;
+  }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-[15px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+@utility btn-primary {
+  @apply btn bg-ink text-paper hover:bg-ink-soft;
+}
+
+@utility btn-secondary {
+  @apply btn border border-line bg-surface text-ink hover:border-ink-soft/50;
+}
+
+@utility btn-danger {
+  @apply btn border border-alert/30 bg-surface text-alert hover:bg-alert-tint;
+}
+
+@utility link {
+  @apply font-medium text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-cedula;
+}
