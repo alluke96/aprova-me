@@ -141,8 +141,11 @@ async function shot(page, name, options = {}) {
 
 async function capture() {
   await mkdir(OUT, { recursive: true });
-  // --lang deixa os campos de data no formato brasileiro (dd/mm/aaaa).
-  const browser = await chromium.launch({ args: ['--lang=pt-BR'] });
+  // Idioma do navegador em pt-BR, para os campos de data aparecerem como dd/mm/aaaa.
+  const browser = await chromium.launch({
+    args: ['--lang=pt-BR'],
+    env: { ...process.env, LANG: 'pt_BR.UTF-8', LANGUAGE: 'pt_BR:pt' },
+  });
   const desktop = await browser.newContext({
     viewport: { width: 1280, height: 800 },
     deviceScaleFactor: 2,

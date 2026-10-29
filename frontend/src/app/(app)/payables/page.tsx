@@ -47,7 +47,27 @@ export default async function PayablesPage({
         </div>
       ) : (
         <>
-          <div className="overflow-x-auto rounded-lg border border-line bg-surface">
+          {/* No celular, uma lista que cabe na tela; editar e excluir ficam no detalhe. */}
+          <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-surface sm:hidden">
+            {result.data.map((payable) => (
+              <li key={payable.id}>
+                <Link
+                  href={`/payables/${payable.id}`}
+                  className="flex items-center justify-between gap-4 px-4 py-3.5 active:bg-cedula-tint/40"
+                >
+                  <span className="flex flex-col">
+                    <span className="text-[17px] font-semibold">{formatMoney(payable.value)}</span>
+                    <span className="text-sm text-muted">
+                      Emissão {formatDate(payable.emissionDate)}
+                    </span>
+                  </span>
+                  <span className="text-sm text-ink-soft">{shortId(payable.id)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hidden overflow-x-auto rounded-lg border border-line bg-surface sm:block">
             <table className="w-full min-w-[640px] text-left text-[15px]">
               <caption className="sr-only">Lista de recebíveis</caption>
               <thead className="border-b border-line text-[13px] text-muted">
