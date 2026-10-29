@@ -1,0 +1,9 @@
+{
+  "name": "aprova-me-screenshots",
+  "private": true,
+  "type": "module",
+  "description": "Sobe dados de exemplo e gera as capturas de tela do README",
+  "dependencies": {
+    "playwright": "1.55.0"
+  }
+}

@@ -1,0 +1,70 @@
+name: Capturas e métricas do README
+
+# Sobe a aplicação inteira, cadastra dados de exemplo, tira as capturas de tela
+# com o Playwright e mede os testes. O resultado vai para a branch docs-assets.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/screenshots/**'
+      - '.github/workflows/screenshots.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Métricas dos testes
+        continue-on-error: true
+        run: |
+          mkdir -p out/metrics
+          (cd backend && npm install --no-audit --no-fund && npx prisma generate \
+            && npx jest --json --outputFile=../out/metrics/backend-tests.json \
+               --coverage --coverageReporters=json-summary --coverageDirectory=../out/metrics/backend-coverage) || true
+          (cd frontend && npm install --no-audit --no-fund \
+            && npx vitest run --reporter=json --outputFile=../out/metrics/frontend-tests.json) || true
+
+      - name: Subir a aplicação
+        run: |
+          docker compose up -d --build --wait --wait-timeout 300
+          for i in $(seq 1 60); do curl -sf http://localhost:3000/login > /dev/null && break; sleep 2; done
+
+      - name: Capturas de tela
+        run: |
+          cd scripts/screenshots
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          node capture.mjs ../../out/screenshots
+
+      - name: Logs dos containers
+        if: always()
+        run: |
+          mkdir -p out
+          docker compose ps > out/compose-ps.txt 2>&1 || true
+          docker compose logs --no-color > out/compose.log 2>&1 || true
+
+      - name: Publicar na branch docs-assets
+        if: always()
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd out
+          git init -q -b docs-assets
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Capturas e métricas de ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" docs-assets
