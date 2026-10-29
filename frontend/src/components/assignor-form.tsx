@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useActionState, useState, useTransition } from 'react';
 import { initialFormState, type FormState } from '@/lib/form-state';
+import { documentMask, maskInput, phoneMask } from '@/lib/mask';
 import { assignorSchema, validateForm } from '@/lib/schemas';
 import { Field } from './field';
 import { FormMessage } from './form-message';
@@ -24,10 +25,19 @@ const FIELDS = [
   {
     name: 'document',
     label: 'CPF ou CNPJ',
-    hint: 'Com ou sem pontuação. Aceita o CNPJ alfanumérico.',
+    hint: 'A pontuação entra sozinha. Aceita o CNPJ alfanumérico.',
     maxLength: 30,
+    autoCapitalize: 'characters',
+    mask: documentMask,
   },
-  { name: 'phone', label: 'Telefone', type: 'tel', autoComplete: 'tel', maxLength: 20 },
+  {
+    name: 'phone',
+    label: 'Telefone',
+    type: 'tel',
+    autoComplete: 'tel',
+    maxLength: 20,
+    mask: phoneMask,
+  },
   { name: 'email', label: 'E-mail', type: 'email', autoComplete: 'email', maxLength: 140, wide: true },
 ] as const;
 
@@ -78,11 +88,16 @@ export function AssignorForm({ action, returnTo }: AssignorFormProps) {
                   name={field.name}
                   type={'type' in field ? field.type : 'text'}
                   autoComplete={'autoComplete' in field ? field.autoComplete : 'off'}
+                  autoCapitalize={'autoCapitalize' in field ? field.autoCapitalize : undefined}
                   maxLength={field.maxLength}
                   className="field-input"
                   value={values[field.name]}
                   onChange={(event) => {
-                    setValues((current) => ({ ...current, [field.name]: event.target.value }));
+                    const value =
+                      'mask' in field
+                        ? maskInput(field.mask, event, values[field.name])
+                        : event.target.value;
+                    setValues((current) => ({ ...current, [field.name]: value }));
                     markEdited(field.name);
                   }}
                   required
