@@ -1,0 +1,7 @@
+NAME                   IMAGE                    COMMAND                  SERVICE    CREATED              STATUS                        PORTS
+aprova-me-api-1        aprova-me-api            "docker-entrypoint.s…"   api        About a minute ago   Up About a minute (healthy)   0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+aprova-me-mailpit-1    axllent/mailpit:latest   "/mailpit"               mailpit    About a minute ago   Up About a minute (healthy)   0.0.0.0:1025->1025/tcp, [::]:1025->1025/tcp, 0.0.0.0:8025->8025/tcp, [::]:8025->8025/tcp, 1110/tcp
+aprova-me-postgres-1   postgres:17-alpine       "docker-entrypoint.s…"   postgres   About a minute ago   Up About a minute (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+aprova-me-redis-1      redis:7-alpine           "docker-entrypoint.s…"   redis      About a minute ago   Up About a minute (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+aprova-me-web-1        aprova-me-web            "docker-entrypoint.s…"   web        About a minute ago   Up 55 seconds                 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+aprova-me-worker-1     aprova-me-worker         "docker-entrypoint.s…"   worker     About a minute ago   Up 55 seconds                 3001/tcp

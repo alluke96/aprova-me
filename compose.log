@@ -1,0 +1,163 @@
+mailpit-1  | time="2026/10/29 13:48:09" level=info msg="[smtpd] starting on [::]:1025 (no encryption)"
+mailpit-1  | time="2026/10/29 13:48:09" level=warning msg="[http] listening on [::]:8025 without --ui-auth-file or --allowed-hosts; the API is reachable from any host that can route to this interface"
+mailpit-1  | time="2026/10/29 13:48:09" level=info msg="[http] starting on [::]:8025"
+mailpit-1  | time="2026/10/29 13:48:09" level=info msg="[http] accessible via http://localhost:8025/"
+api-1      | Prisma schema loaded from prisma/schema.prisma
+api-1      | Datasource "db": PostgreSQL database "aprovame", schema "public" at "postgres:5432"
+api-1      | 
+api-1      | 1 migration found in prisma/migrations
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +16ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mQueuesModule dependencies initialized[39m[38;5;3m +1ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +0ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +5ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +1ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +3ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWorkerModule dependencies initialized[39m[38;5;3m +0ms[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:48:21 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32mWorker de lotes iniciado[39m
+worker-1   | [31m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [31m  ERROR[39m [38;5;3m[PayableProcessor] [39m[31mRecebível a72d662a-f8d1-4f90-80a0-bf22e2564d41 enviado para a fila morta: Cedente cca149a3-ff7e-4d22-bca9-a7b9be46bc14 não encontrado[39m
+worker-1   | [31m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [31m  ERROR[39m [38;5;3m[PayableProcessor] [39m[31mRecebível 81b95e46-326e-4a33-a6e1-89cf8244593b enviado para a fila morta: Cedente cca149a3-ff7e-4d22-bca9-a7b9be46bc14 não encontrado[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [32m    LOG[39m [38;5;3m[BatchProgressService] [39m[32mLote bdca1878-958d-4309-a2a8-f46fcfdb41ab concluído[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [32m    LOG[39m [38;5;3m[MailService] [39m[32mE-mail enviado para operacoes@aprova.me: [Fila morta] Recebível a72d662a-f8d1-4f90-80a0-bf22e2564d41 não foi processado[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [32m    LOG[39m [38;5;3m[MailService] [39m[32mE-mail enviado para cliente@aprova.me: Lote bdca1878-958d-4309-a2a8-f46fcfdb41ab processado: 1998 sucesso(s), 2 falha(s)[39m
+worker-1   | [32m[Nest] 1  - [39m10/29/2026, 1:49:05 PM [32m    LOG[39m [38;5;3m[MailService] [39m[32mE-mail enviado para operacoes@aprova.me: [Fila morta] Recebível 81b95e46-326e-4a33-a6e1-89cf8244593b não foi processado[39m
+api-1      | 
+api-1      | Applying migration `20261028000000_init`
+api-1      | 
+api-1      | The following migration(s) have been applied:
+api-1      | 
+api-1      | migrations/
+api-1      |   └─ 20261028000000_init/
+api-1      |     └─ migration.sql
+api-1      |       
+api-1      | All migrations have been successfully applied.
+api-1      | npm notice
+api-1      | npm notice New major version of npm available! 10.9.9 -> 12.2.1
+api-1      | npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+api-1      | npm notice To update run: npm install -g npm@12.2.1
+redis-1    | 1:C 29 Oct 2026 13:48:09.949 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 29 Oct 2026 13:48:09.949 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 29 Oct 2026 13:48:09.949 * Redis version=7.4.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 1:C 29 Oct 2026 13:48:09.949 * Configuration loaded
+redis-1    | 1:M 29 Oct 2026 13:48:09.949 * monotonic clock: POSIX clock_gettime
+redis-1    | 1:M 29 Oct 2026 13:48:09.951 * Running mode=standalone, port=6379.
+redis-1    | 1:M 29 Oct 2026 13:48:09.951 * Server initialized
+redis-1    | 1:M 29 Oct 2026 13:48:09.952 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis-1    | 1:M 29 Oct 2026 13:48:09.953 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1    | 1:M 29 Oct 2026 13:48:09.953 * Ready to accept connections tcp
+redis-1    | 1:M 29 Oct 2026 13:49:10.007 * 10000 changes in 60 seconds. Saving...
+redis-1    | 1:M 29 Oct 2026 13:49:10.007 * Background saving started by pid 83
+api-1      | npm notice
+api-1      | Seed concluído: usuário "aprovame" disponível.
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +17ms[39m
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mQueuesModule dependencies initialized[39m[38;5;3m +1ms[39m
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mThrottlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +0ms[39m
+web-1      | ▲ Next.js 16.4.3
+web-1      | - Local:         http://localhost:3000
+web-1      | - Network:       http://0.0.0.0:3000
+web-1      | ✓ Ready in 0ms
+web-1       | ✓ Running next.config took 1.0ms
+api-1      | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssignorsModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPayablesModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +3ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBatchesModule dependencies initialized[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:17 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mHealthController {/health}:[39m[38;5;3m +26ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/health, GET} route[39m[38;5;3m +2ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/integrations/auth}:[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/auth, POST} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/integrations/users}:[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/users, POST} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/users, GET} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/users/:id, DELETE} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssignorsController {/integrations/assignor}:[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/assignor, POST} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/assignor, GET} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/assignor/:id, GET} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/assignor/:id, PATCH} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/assignor/:id, DELETE} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPayablesController {/integrations/payable}:[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable, POST} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable, GET} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable/:id, GET} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable/:id, PATCH} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable/:id, DELETE} route[39m[38;5;3m +1ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mBatchesController {/integrations/payable/batch}:[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable/batch, POST} route[39m[38;5;3m +0ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/integrations/payable/batch/:id, GET} route[39m[38;5;3m +0ms[39m
+redis-1     | 83:C 29 Oct 2026 13:49:10.027 * DB saved on disk
+redis-1     | 83:C 29 Oct 2026 13:49:10.028 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1     | 1:M 29 Oct 2026 13:49:10.108 * Background saving terminated with success
+postgres-1  | The files belonging to this database system will be owned by user "postgres".
+postgres-1  | This user must also own the server process.
+postgres-1  | 
+postgres-1  | The database cluster will be initialized with locale "en_US.utf8".
+postgres-1  | The default database encoding has accordingly been set to "UTF8".
+postgres-1  | The default text search configuration will be set to "english".
+postgres-1  | 
+postgres-1  | Data page checksums are disabled.
+postgres-1  | 
+postgres-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1  | creating subdirectories ... ok
+postgres-1  | selecting dynamic shared memory implementation ... posix
+postgres-1  | selecting default "max_connections" ... 100
+postgres-1  | selecting default "shared_buffers" ... 128MB
+postgres-1  | selecting default time zone ... UTC
+postgres-1  | creating configuration files ... ok
+postgres-1  | running bootstrap script ... ok
+postgres-1  | sh: locale: not found
+postgres-1  | 2026-10-29 13:48:10.408 UTC [35] WARNING:  no usable system locales were found
+postgres-1  | performing post-bootstrap initialization ... ok
+postgres-1  | initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | syncing data to disk ... ok
+postgres-1  | 
+postgres-1  | 
+postgres-1  | Success. You can now start the database server using:
+postgres-1  | 
+postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1  | 
+postgres-1  | waiting for server to start....2026-10-29 13:48:10.971 UTC [41] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-10-29 13:48:10.972 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-10-29 13:48:10.975 UTC [44] LOG:  database system was shut down at 2026-10-29 13:48:10 UTC
+postgres-1  | 2026-10-29 13:48:10.980 UTC [41] LOG:  database system is ready to accept connections
+postgres-1  |  done
+postgres-1  | server started
+postgres-1  | CREATE DATABASE
+postgres-1  | 
+postgres-1  | 
+postgres-1  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+postgres-1  | 
+postgres-1  | waiting for server to shut down...2026-10-29 13:48:11.118 UTC [41] LOG:  received fast shutdown request
+postgres-1  | .2026-10-29 13:48:11.119 UTC [41] LOG:  aborting any active transactions
+postgres-1  | 2026-10-29 13:48:11.122 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+postgres-1  | 2026-10-29 13:48:11.123 UTC [42] LOG:  shutting down
+postgres-1  | 2026-10-29 13:48:11.124 UTC [42] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2026-10-29 13:48:11.141 UTC [42] LOG:  checkpoint complete: wrote 926 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.005 s, total=0.018 s; sync files=301, longest=0.003 s, average=0.001 s; distance=4266 kB, estimate=4266 kB; lsn=0/191E820, redo lsn=0/191E820
+postgres-1  | 2026-10-29 13:48:11.149 UTC [41] LOG:  database system is shut down
+postgres-1  |  done
+postgres-1  | server stopped
+postgres-1  | 
+postgres-1  | PostgreSQL init process complete; ready for start up.
+postgres-1  | 
+postgres-1  | 2026-10-29 13:48:11.242 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-10-29 13:48:11.242 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2026-10-29 13:48:11.242 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2026-10-29 13:48:11.249 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-10-29 13:48:11.252 UTC [57] LOG:  database system was shut down at 2026-10-29 13:48:11 UTC
+postgres-1  | 2026-10-29 13:48:11.257 UTC [1] LOG:  database system is ready to accept connections
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +33ms[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:48:18 PM [32m    LOG[39m [38;5;3m[Bootstrap] [39m[32mAPI rodando em http://localhost:3001 (docs em /docs)[39m
+api-1       | [32m[Nest] 84  - [39m10/29/2026, 1:49:02 PM [32m    LOG[39m [38;5;3m[BatchesService] [39m[32mLote bdca1878-958d-4309-a2a8-f46fcfdb41ab recebido com 2000 recebível(is)[39m

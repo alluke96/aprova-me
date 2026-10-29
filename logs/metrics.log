@@ -1,0 +1,114 @@
+npm warn deprecated cron-parser@4.9.0: v4 is no longer maintained, upgrade to v5
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 752 packages in 37s
+Prisma schema loaded from prisma/schema.prisma
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.28                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 70ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+PASS src/assignors/assignors.service.spec.ts (6.143 s)
+PASS src/payables/payables.service.spec.ts (6.398 s)
+PASS src/batches/batch-progress.service.spec.ts (6.754 s)
+[32m[Nest] 2617  - [39m10/29/2026, 1:46:21 PM [32m    LOG[39m [38;5;3m[BatchProgressService] [39m[32mLote c0ffee00-0000-4000-8000-000000000001 concluído[39m
+[31m[Nest] 2623  - [39m10/29/2026, 1:46:21 PM [31m  ERROR[39m [38;5;3m[BatchesService] [39m[31mFalha ao enfileirar o lote c0ffee00-0000-4000-8000-000000000001[39m
+[31m[Nest] 2623  - [39m10/29/2026, 1:46:21 PM [31m  ERROR[39m [38;5;3m[BatchesService] [39mError: redis down
+    at Object.<anonymous> [90m(/home/runner/work/aprova-me/aprova-me/backend/[39msrc/batches/batches.service.spec.ts:84:37[90m)[39m
+    at Promise.finally.completed [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1834:28[90m)[39m
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1774:10[90m)[39m
+    at _callCircusTest [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1167:40[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at _runTestInContext [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1103:3[90m)[39m
+    at runTestWithContext [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:996:5[90m)[39m
+    at _runTestsForDescribeBlockOnce [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1008:11[90m)[39m
+    at _runTestsForDescribeBlock [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:824:5[90m)[39m
+    at _runTestsForDescribeBlockOnce [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:1003:11[90m)[39m
+    at _runTestsForDescribeBlock [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:824:5[90m)[39m
+    at run [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:789:3[90m)[39m
+    at runAndTransformResultsToJestFormat [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/jestAdapterInit.js:2300:21[90m)[39m
+    at jestAdapter [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-circus[24m/build/runner.js:111:19[90m)[39m
+    at runTestInternal [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-runner[24m/build/testWorker.js:247:16[90m)[39m
+    at runTest [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-runner[24m/build/testWorker.js:315:7[90m)[39m
+    at Object.worker [90m(/home/runner/work/aprova-me/aprova-me/backend/[39mnode_modules/[4mjest-runner[24m/build/testWorker.js:479:12[90m)[39m
+PASS src/batches/batches.service.spec.ts
+[32m[Nest] 2623  - [39m10/29/2026, 1:46:21 PM [32m    LOG[39m [38;5;3m[BatchesService] [39m[32mLote c0ffee00-0000-4000-8000-000000000001 recebido com 2 recebível(is)[39m
+[32m[Nest] 2623  - [39m10/29/2026, 1:46:21 PM [32m    LOG[39m [38;5;3m[BatchesService] [39m[32mLote c0ffee00-0000-4000-8000-000000000001 recebido com 2500 recebível(is)[39m
+[31m[Nest] 2616  - [39m10/29/2026, 1:46:21 PM [31m  ERROR[39m [38;5;3m[PayableProcessor] [39m[31mRecebível b3d4c5e6-7f80-4a1b-9c2d-3e4f5a6b7c8d enviado para a fila morta: db down[39m
+[31m[Nest] 2616  - [39m10/29/2026, 1:46:21 PM [31m  ERROR[39m [38;5;3m[PayableProcessor] [39m[31mRecebível b3d4c5e6-7f80-4a1b-9c2d-3e4f5a6b7c8d enviado para a fila morta: Cedente 6f1c2a7e-2f7a-4b8e-9c55-0f6a3b9e1d10 não encontrado[39m
+PASS src/batches/payable.processor.spec.ts
+PASS src/auth/jwt-auth.guard.spec.ts
+[33m[Nest] 2616  - [39m10/29/2026, 1:46:21 PM [33m   WARN[39m [38;5;3m[PayableProcessor] [39m[33mRecebível b3d4c5e6-7f80-4a1b-9c2d-3e4f5a6b7c8d falhou (tentativa 3/5): db down[39m
+PASS src/users/users.service.spec.ts
+PASS src/common/validation/validation-pipe.spec.ts
+PASS src/payables/dto/payable.dto.spec.ts
+PASS src/assignors/dto/assignor.dto.spec.ts
+PASS src/mail/mail.service.spec.ts
+PASS src/common/validation/document.spec.ts
+[32m[Nest] 2623  - [39m10/29/2026, 1:46:22 PM [32m    LOG[39m [38;5;3m[MailService] [39m[32mE-mail enviado para cliente@aprova.me: Lote lote-1 processado: 8 sucesso(s), 2 falha(s)[39m
+[32m[Nest] 2623  - [39m10/29/2026, 1:46:22 PM [32m    LOG[39m [38;5;3m[MailService] [39m[32mE-mail enviado para operacoes@aprova.me: [Fila morta] Recebível b3d4c5e6-7f80-4a1b-9c2d-3e4f5a6b7c8d não foi processado[39m
+PASS src/assignors/assignors.controller.spec.ts
+PASS src/payables/payables.controller.spec.ts
+[31m[Nest] 2616  - [39m10/29/2026, 1:46:23 PM [31m  ERROR[39m [38;5;3m[PrismaExceptionFilter] [39m[31mErro inesperado do Prisma (P9999)[39m
+PrismaClientKnownRequestError: erro
+    at prismaError (/home/runner/work/aprova-me/aprova-me/backend/src/common/filters/prisma-exception.filter.spec.ts:6:10)
+    at /home/runner/work/aprova-me/aprova-me/backend/src/common/filters/prisma-exception.filter.spec.ts:28:18
+    at Object.<anonymous> (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-each/build/index.js:80:140)
+    at Promise.finally.completed (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1834:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1774:10)
+    at _callCircusTest (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1167:40)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at _runTestInContext (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1103:3)
+    at runTestWithContext (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:996:5)
+    at _runTestsForDescribeBlockOnce (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1008:11)
+    at _runTestsForDescribeBlock (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:824:5)
+    at _runTestsForDescribeBlockOnce (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:1003:11)
+    at _runTestsForDescribeBlock (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:824:5)
+    at run (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:789:3)
+    at runAndTransformResultsToJestFormat (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/jestAdapterInit.js:2300:21)
+    at jestAdapter (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-circus/build/runner.js:111:19)
+    at runTestInternal (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-runner/build/testWorker.js:247:16)
+    at runTest (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-runner/build/testWorker.js:315:7)
+    at Object.worker (/home/runner/work/aprova-me/aprova-me/backend/node_modules/jest-runner/build/testWorker.js:479:12)
+PASS src/common/filters/prisma-exception.filter.spec.ts
+PASS src/auth/auth.service.spec.ts
+PASS src/common/validation/money.spec.ts
+PASS src/batches/notifications.processor.spec.ts
+[33m[Nest] 2616  - [39m10/29/2026, 1:46:23 PM [33m   WARN[39m [38;5;3m[NotificationsProcessor] [39m[33mLote lote não existe mais; e-mail ignorado[39m
+PASS src/config/env.spec.ts
+PASS src/common/validation/date.spec.ts
+PASS src/batches/dead-letter.processor.spec.ts
+PASS src/health/health.controller.spec.ts
+PASS src/batches/dto/batch.dto.spec.ts
+PASS src/auth/auth.controller.spec.ts
+PASS src/common/dto/pagination.spec.ts
+PASS src/batches/batches.controller.spec.ts
+PASS src/users/users.controller.spec.ts
+PASS src/users/password.spec.ts
+
+Test Suites: 28 passed, 28 total
+Tests:       131 passed, 131 total
+Snapshots:   0 total
+Time:        13.581 s
+Ran all test suites.
+Test results written to: ../out/metrics/backend-tests.json
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 476 packages in 27s
+JSON report written to /home/runner/work/aprova-me/aprova-me/out/metrics/frontend-tests.json

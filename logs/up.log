@@ -1,0 +1,584 @@
+ mailpit Pulling 
+ redis Pulling 
+ postgres Pulling 
+ 7b229517ed22 Pulling fs layer 
+ 9098654d3377 Pulling fs layer 
+ dddde5442af4 Pulling fs layer 
+ fa5e490e3893 Pulling fs layer 
+ 694a01b64034 Pulling fs layer 
+ 7a82a00c713d Pulling fs layer 
+ d6e09b1bfe5f Pulling fs layer 
+ fa5e490e3893 Waiting 
+ e018eb860c5e Pulling fs layer 
+ f5e975d661d7 Pulling fs layer 
+ d5bf1ad711f7 Pulling fs layer 
+ 694a01b64034 Waiting 
+ 7a82a00c713d Waiting 
+ d6e09b1bfe5f Waiting 
+ f5e975d661d7 Waiting 
+ d5bf1ad711f7 Waiting 
+ e018eb860c5e Waiting 
+ 759efa4719c9 Pulling fs layer 
+ a239ec2b8fe1 Pulling fs layer 
+ 759efa4719c9 Waiting 
+ a239ec2b8fe1 Waiting 
+ cef7ad5a05c6 Pulling fs layer 
+ 1ea868e596ec Pulling fs layer 
+ ae75cb664c8f Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ e25d07126ba7 Pulling fs layer 
+ cef7ad5a05c6 Waiting 
+ 1ea868e596ec Waiting 
+ ae75cb664c8f Waiting 
+ 4f4fb700ef54 Waiting 
+ e25d07126ba7 Waiting 
+ 7b229517ed22 Pulling fs layer 
+ 6d36f2406fac Pulling fs layer 
+ bb74c0cfe3af Pulling fs layer 
+ 6d36f2406fac Waiting 
+ bb74c0cfe3af Waiting 
+ 9098654d3377 Downloading [==================================================>]     968B/968B
+ 7b229517ed22 Downloading [>                                                  ]  48.55kB/3.853MB
+ 9098654d3377 Verifying Checksum 
+ 9098654d3377 Download complete 
+ 7b229517ed22 Downloading [>                                                  ]  48.55kB/3.853MB
+ dddde5442af4 Downloading [>                                                  ]  15.79kB/900kB
+ dddde5442af4 Download complete 
+ 7b229517ed22 Verifying Checksum 
+ 7b229517ed22 Verifying Checksum 
+ 7b229517ed22 Download complete 
+ 7b229517ed22 Download complete 
+ 7b229517ed22 Extracting [>                                                  ]  65.54kB/3.853MB
+ 7b229517ed22 Extracting [>                                                  ]  65.54kB/3.853MB
+ 7b229517ed22 Extracting [==================================================>]  3.853MB/3.853MB
+ 7b229517ed22 Extracting [==================================================>]  3.853MB/3.853MB
+ 7b229517ed22 Extracting [==================================================>]  3.853MB/3.853MB
+ 7b229517ed22 Extracting [==================================================>]  3.853MB/3.853MB
+ 7b229517ed22 Pull complete 
+ 7b229517ed22 Pull complete 
+ 9098654d3377 Extracting [==================================================>]     968B/968B
+ 9098654d3377 Extracting [==================================================>]     968B/968B
+ fa5e490e3893 Downloading [==================================================>]     116B/116B
+ fa5e490e3893 Verifying Checksum 
+ fa5e490e3893 Download complete 
+ 7a82a00c713d Downloading [=================>                                 ]  3.501kB/9.999kB
+ 7a82a00c713d Downloading [==================================================>]  9.999kB/9.999kB
+ 7a82a00c713d Verifying Checksum 
+ 7a82a00c713d Download complete 
+ 694a01b64034 Downloading [>                                                  ]  527.3kB/112.4MB
+ 694a01b64034 Downloading [========>                                          ]  19.72MB/112.4MB
+ e018eb860c5e Downloading [==================================================>]     169B/169B
+ e018eb860c5e Verifying Checksum 
+ e018eb860c5e Download complete 
+ d6e09b1bfe5f Downloading [==================================================>]     129B/129B
+ d6e09b1bfe5f Verifying Checksum 
+ d6e09b1bfe5f Download complete 
+ 694a01b64034 Downloading [==================>                                ]  42.63MB/112.4MB
+ 694a01b64034 Downloading [==================================>                ]  77.84MB/112.4MB
+ f5e975d661d7 Downloading [============================>                      ]  3.501kB/6.11kB
+ f5e975d661d7 Downloading [==================================================>]   6.11kB/6.11kB
+ 694a01b64034 Verifying Checksum 
+ 694a01b64034 Download complete 
+ f5e975d661d7 Verifying Checksum 
+ f5e975d661d7 Download complete 
+ d5bf1ad711f7 Downloading [==================================================>]     186B/186B
+ d5bf1ad711f7 Verifying Checksum 
+ d5bf1ad711f7 Download complete 
+ cef7ad5a05c6 Downloading [>                                                  ]  3.499kB/198.7kB
+ a239ec2b8fe1 Downloading [==================================================>]     950B/950B
+ a239ec2b8fe1 Verifying Checksum 
+ a239ec2b8fe1 Download complete 
+ cef7ad5a05c6 Downloading [==================================================>]  198.7kB/198.7kB
+ cef7ad5a05c6 Verifying Checksum 
+ cef7ad5a05c6 Download complete 
+ 759efa4719c9 Downloading [>                                                  ]  48.55kB/3.625MB
+ 759efa4719c9 Download complete 
+ 759efa4719c9 Extracting [>                                                  ]  65.54kB/3.625MB
+ 759efa4719c9 Extracting [===>                                               ]  262.1kB/3.625MB
+ ae75cb664c8f Downloading [==================================================>]     100B/100B
+ ae75cb664c8f Verifying Checksum 
+ ae75cb664c8f Download complete 
+ 1ea868e596ec Downloading [>                                                  ]  130.5kB/12.42MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Download complete 
+ 1ea868e596ec Verifying Checksum 
+ 1ea868e596ec Download complete 
+ 759efa4719c9 Extracting [==============================================>    ]  3.342MB/3.625MB
+ 759efa4719c9 Extracting [==================================================>]  3.625MB/3.625MB
+ 759efa4719c9 Pull complete 
+ a239ec2b8fe1 Extracting [==================================================>]     950B/950B
+ a239ec2b8fe1 Extracting [==================================================>]     950B/950B
+ e25d07126ba7 Downloading [==================================================>]     601B/601B
+ e25d07126ba7 Verifying Checksum 
+ e25d07126ba7 Download complete 
+ 6d36f2406fac Downloading [>                                                  ]  114.1kB/10.38MB
+ bb74c0cfe3af Downloading [>                                                  ]  3.499kB/177.3kB
+ 6d36f2406fac Verifying Checksum 
+ 6d36f2406fac Download complete 
+ bb74c0cfe3af Downloading [==================================================>]  177.3kB/177.3kB
+ bb74c0cfe3af Download complete 
+ 6d36f2406fac Extracting [>                                                  ]  131.1kB/10.38MB
+ a239ec2b8fe1 Pull complete 
+ cef7ad5a05c6 Extracting [========>                                          ]  32.77kB/198.7kB
+ 6d36f2406fac Extracting [=>                                                 ]  262.1kB/10.38MB
+ cef7ad5a05c6 Extracting [==================================================>]  198.7kB/198.7kB
+ 6d36f2406fac Extracting [=====================>                             ]  4.456MB/10.38MB
+ cef7ad5a05c6 Extracting [==================================================>]  198.7kB/198.7kB
+ 6d36f2406fac Extracting [==================================================>]  10.38MB/10.38MB
+ 9098654d3377 Pull complete 
+ 6d36f2406fac Pull complete 
+ cef7ad5a05c6 Pull complete 
+ dddde5442af4 Extracting [=>                                                 ]  32.77kB/900kB
+ bb74c0cfe3af Extracting [=========>                                         ]  32.77kB/177.3kB
+ bb74c0cfe3af Extracting [==================================================>]  177.3kB/177.3kB
+ 1ea868e596ec Extracting [>                                                  ]  131.1kB/12.42MB
+ dddde5442af4 Extracting [==================================================>]    900kB/900kB
+ dddde5442af4 Pull complete 
+ fa5e490e3893 Extracting [==================================================>]     116B/116B
+ fa5e490e3893 Extracting [==================================================>]     116B/116B
+ bb74c0cfe3af Extracting [==================================================>]  177.3kB/177.3kB
+ fa5e490e3893 Pull complete 
+ 694a01b64034 Extracting [>                                                  ]  557.1kB/112.4MB
+ 1ea868e596ec Extracting [=============>                                     ]  3.277MB/12.42MB
+ 694a01b64034 Extracting [>                                                  ]  2.228MB/112.4MB
+ 1ea868e596ec Extracting [=======================================>           ]  9.699MB/12.42MB
+ bb74c0cfe3af Pull complete 
+ mailpit Pulled 
+ 1ea868e596ec Extracting [==================================================>]  12.42MB/12.42MB
+ 694a01b64034 Extracting [===>                                               ]  7.242MB/112.4MB
+ 1ea868e596ec Pull complete 
+ ae75cb664c8f Extracting [==================================================>]     100B/100B
+ ae75cb664c8f Extracting [==================================================>]     100B/100B
+ ae75cb664c8f Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ e25d07126ba7 Extracting [==================================================>]     601B/601B
+ e25d07126ba7 Extracting [==================================================>]     601B/601B
+ e25d07126ba7 Pull complete 
+ redis Pulled 
+ 694a01b64034 Extracting [=======>                                           ]  16.15MB/112.4MB
+ 694a01b64034 Extracting [===========>                                       ]  25.62MB/112.4MB
+ 694a01b64034 Extracting [===============>                                   ]  35.09MB/112.4MB
+ 694a01b64034 Extracting [===================>                               ]  44.56MB/112.4MB
+ 694a01b64034 Extracting [=======================>                           ]  53.48MB/112.4MB
+ 694a01b64034 Extracting [==========================>                        ]  58.49MB/112.4MB
+ 694a01b64034 Extracting [=============================>                     ]  65.73MB/112.4MB
+ 694a01b64034 Extracting [=================================>                 ]  74.65MB/112.4MB
+ 694a01b64034 Extracting [====================================>              ]  81.33MB/112.4MB
+ 694a01b64034 Extracting [====================================>              ]  81.89MB/112.4MB
+ 694a01b64034 Extracting [====================================>              ]     83MB/112.4MB
+ 694a01b64034 Extracting [======================================>            ]  85.79MB/112.4MB
+ 694a01b64034 Extracting [=======================================>           ]  89.69MB/112.4MB
+ 694a01b64034 Extracting [=========================================>         ]  94.14MB/112.4MB
+ 694a01b64034 Extracting [============================================>      ]  99.16MB/112.4MB
+ 694a01b64034 Extracting [================================================>  ]  109.7MB/112.4MB
+ 694a01b64034 Extracting [==================================================>]  112.4MB/112.4MB
+ 694a01b64034 Pull complete 
+ 7a82a00c713d Extracting [==================================================>]  9.999kB/9.999kB
+ 7a82a00c713d Extracting [==================================================>]  9.999kB/9.999kB
+ 7a82a00c713d Pull complete 
+ d6e09b1bfe5f Extracting [==================================================>]     129B/129B
+ d6e09b1bfe5f Extracting [==================================================>]     129B/129B
+ d6e09b1bfe5f Pull complete 
+ e018eb860c5e Extracting [==================================================>]     169B/169B
+ e018eb860c5e Extracting [==================================================>]     169B/169B
+ e018eb860c5e Pull complete 
+ f5e975d661d7 Extracting [==================================================>]   6.11kB/6.11kB
+ f5e975d661d7 Extracting [==================================================>]   6.11kB/6.11kB
+ f5e975d661d7 Pull complete 
+ d5bf1ad711f7 Extracting [==================================================>]     186B/186B
+ d5bf1ad711f7 Extracting [==================================================>]     186B/186B
+ d5bf1ad711f7 Pull complete 
+ postgres Pulled 
+#1 [internal] load local bake definitions
+#1 reading from stdin 995B done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 686B 0.0s done
+#2 DONE 0.0s
+
+#3 [worker internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.32kB 0.0s done
+#3 DONE 0.1s
+
+#4 [worker] resolve image config for docker-image://docker.io/docker/dockerfile:1
+#4 ...
+
+#5 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#4 [worker] resolve image config for docker-image://docker.io/docker/dockerfile:1
+#4 DONE 0.9s
+
+#6 [web] docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#6 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e done
+#6 sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 9.08kB / 9.08kB done
+#6 sha256:7b32114e84ca21aeb2d6f871a0b62b3a0762193f75d9afd048ee4cbe889f3148 1.13kB / 1.13kB done
+#6 sha256:528c92d70d7e39dbb3dd1c6681f6750c565c7e45b70527cda47c1a61495c1b6a 1.41kB / 1.41kB done
+#6 sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 7.34MB / 14.28MB 0.1s
+#6 sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 9.08kB / 9.08kB done
+#6 sha256:7b32114e84ca21aeb2d6f871a0b62b3a0762193f75d9afd048ee4cbe889f3148 1.13kB / 1.13kB done
+#6 sha256:528c92d70d7e39dbb3dd1c6681f6750c565c7e45b70527cda47c1a61495c1b6a 1.41kB / 1.41kB done
+#6 sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 14.28MB / 14.28MB 0.1s done
+#6 extracting sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 0.1s
+#6 extracting sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 0.1s done
+#6 DONE 0.3s
+
+#7 [worker internal] load metadata for docker.io/library/node:22-bookworm-slim
+#7 ...
+
+#8 [auth] library/node:pull token for registry-1.docker.io
+#8 DONE 0.0s
+
+#7 [api internal] load metadata for docker.io/library/node:22-bookworm-slim
+#7 DONE 0.9s
+
+#9 [web internal] load .dockerignore
+#9 transferring context: 94B done
+#9 DONE 0.0s
+
+#10 [api internal] load .dockerignore
+#10 transferring context: 78B done
+#10 DONE 0.0s
+
+#11 [web internal] load build context
+#11 transferring context: 403.98kB 0.0s done
+#11 DONE 0.0s
+
+#12 [worker internal] load build context
+#12 transferring context: 547.26kB 0.0s done
+#12 DONE 0.0s
+
+#13 [worker deps 1/4] FROM docker.io/library/node:22-bookworm-slim@sha256:4b150b48b4116e2a22f2c39cc27025fbf4f153e2078fd3b14d159fdb5c7279da
+#13 resolve docker.io/library/node:22-bookworm-slim@sha256:4b150b48b4116e2a22f2c39cc27025fbf4f153e2078fd3b14d159fdb5c7279da done
+#13 sha256:709e8267cebf108d59c4e6e386882a5c79c10bbe11ecd02c6ed9ed4efa5b905d 0B / 3.31kB 0.1s
+#13 sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c 0B / 49.89MB 0.1s
+#13 sha256:4b150b48b4116e2a22f2c39cc27025fbf4f153e2078fd3b14d159fdb5c7279da 5.22kB / 5.22kB done
+#13 sha256:709e8267cebf108d59c4e6e386882a5c79c10bbe11ecd02c6ed9ed4efa5b905d 3.31kB / 3.31kB 0.2s done
+#13 sha256:4b150b48b4116e2a22f2c39cc27025fbf4f153e2078fd3b14d159fdb5c7279da 5.22kB / 5.22kB done
+#13 sha256:9f0dde62d10e7ff7a310ecaebd66225f6b46c17e6cb778449a77b05d3541bea2 1.93kB / 1.93kB done
+#13 sha256:c469fbffcbb0086ddfb92598192d3e09eab25f2d81b9750a00f77f0910fed744 6.77kB / 6.77kB done
+#13 sha256:3c5439d0ae62993af4cc4e21b8c777297e81bc40e200d4633c85a3e0f977a3bc 28.25MB / 28.25MB 0.2s done
+#13 sha256:d22dd8aef5082b9de7fb037db9c398ee2822c5c81cc5cbb63bb32a46a5decdb1 0B / 1.71MB 0.2s
+#13 sha256:0bee45faaffff77eee1e3d151cc650b854df28523ea01e5a2dcc0327da8793a9 0B / 448B 0.2s
+#13 extracting sha256:3c5439d0ae62993af4cc4e21b8c777297e81bc40e200d4633c85a3e0f977a3bc
+#13 sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c 23.07MB / 49.89MB 0.3s
+#13 sha256:d22dd8aef5082b9de7fb037db9c398ee2822c5c81cc5cbb63bb32a46a5decdb1 1.71MB / 1.71MB 0.3s done
+#13 sha256:0bee45faaffff77eee1e3d151cc650b854df28523ea01e5a2dcc0327da8793a9 448B / 448B 0.3s done
+#13 sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c 49.89MB / 49.89MB 0.4s
+#13 sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c 49.89MB / 49.89MB 0.4s done
+#13 extracting sha256:3c5439d0ae62993af4cc4e21b8c777297e81bc40e200d4633c85a3e0f977a3bc 1.0s done
+#13 extracting sha256:3c5439d0ae62993af4cc4e21b8c777297e81bc40e200d4633c85a3e0f977a3bc 1.0s done
+#13 extracting sha256:709e8267cebf108d59c4e6e386882a5c79c10bbe11ecd02c6ed9ed4efa5b905d done
+#13 extracting sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c
+#13 extracting sha256:df736340692d217b57cd447c94f978f9a91ce3e8805b225e78374eae3aff864c 1.2s done
+#13 extracting sha256:d22dd8aef5082b9de7fb037db9c398ee2822c5c81cc5cbb63bb32a46a5decdb1
+#13 extracting sha256:d22dd8aef5082b9de7fb037db9c398ee2822c5c81cc5cbb63bb32a46a5decdb1 0.0s done
+#13 extracting sha256:0bee45faaffff77eee1e3d151cc650b854df28523ea01e5a2dcc0327da8793a9 done
+#13 DONE 2.8s
+
+#14 [web deps 2/4] WORKDIR /app
+#14 DONE 0.0s
+
+#15 [web deps 3/4] COPY package.json package-lock.json* ./
+#15 DONE 0.0s
+
+#16 [worker base 2/3] RUN apt-get update && apt-get install -y --no-install-recommends openssl   && rm -rf /var/lib/apt/lists/*
+#16 0.183 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#16 0.192 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#16 0.192 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#16 0.250 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+#16 0.301 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#16 0.348 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [358 kB]
+#16 1.142 Fetched 9397 kB in 1s (9772 kB/s)
+#16 1.142 Reading package lists...
+#16 1.676 Reading package lists...
+#16 2.339 Building dependency tree...
+#16 2.493 Reading state information...
+#16 2.623 The following additional packages will be installed:
+#16 2.624   libssl3
+#16 2.625 Suggested packages:
+#16 2.625   ca-certificates
+#16 2.647 The following NEW packages will be installed:
+#16 2.648   libssl3 openssl
+#16 2.673 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+#16 2.673 Need to get 3482 kB of archives.
+#16 2.673 After this operation, 8558 kB of additional disk space will be used.
+#16 2.673 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.22-1~deb12u2 [2040 kB]
+#16 2.692 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.22-1~deb12u2 [1442 kB]
+#16 2.848 debconf: delaying package configuration, since apt-utils is not installed
+#16 2.877 Fetched 3482 kB in 0s (76.3 MB/s)
+#16 2.899 Selecting previously unselected package libssl3:amd64.
+#16 2.899 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6096 files and directories currently installed.)
+#16 2.905 Preparing to unpack .../libssl3_3.0.22-1~deb12u2_amd64.deb ...
+#16 2.907 Unpacking libssl3:amd64 (3.0.22-1~deb12u2) ...
+#16 3.079 Selecting previously unselected package openssl.
+#16 3.081 Preparing to unpack .../openssl_3.0.22-1~deb12u2_amd64.deb ...
+#16 3.082 Unpacking openssl (3.0.22-1~deb12u2) ...
+#16 3.195 Setting up libssl3:amd64 (3.0.22-1~deb12u2) ...
+#16 3.201 Setting up openssl (3.0.22-1~deb12u2) ...
+#16 3.206 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#16 DONE 3.4s
+
+#17 [worker base 3/3] WORKDIR /app
+#17 DONE 0.0s
+
+#18 [api deps 1/2] COPY package.json package-lock.json* ./
+#18 DONE 0.0s
+
+#19 [api deps 2/2] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#19 5.653 npm warn deprecated cron-parser@4.9.0: v4 is no longer maintained, upgrade to v5
+#19 ...
+
+#20 [web deps 4/4] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#20 1.821 npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+#20 8.935 npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#20 ...
+
+#19 [api deps 2/2] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#19 8.473 npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#19 13.61 npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#19 ...
+
+#20 [web deps 4/4] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#20 17.26 
+#20 17.26 added 483 packages, and audited 484 packages in 17s
+#20 17.26 
+#20 17.26 169 packages are looking for funding
+#20 17.26   run `npm fund` for details
+#20 17.28 
+#20 17.28 3 vulnerabilities (1 moderate, 2 critical)
+#20 17.28 
+#20 17.28 To address all issues (including breaking changes), run:
+#20 17.28   npm audit fix --force
+#20 17.28 
+#20 17.28 Run `npm audit` for details.
+#20 17.28 npm notice
+#20 17.28 npm notice New major version of npm available! 10.9.9 -> 12.2.1
+#20 17.28 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+#20 17.28 npm notice To update run: npm install -g npm@12.2.1
+#20 17.28 npm notice
+#20 DONE 19.7s
+
+#19 [api deps 2/2] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#19 ...
+
+#21 [web build 1/2] COPY . .
+#21 DONE 0.1s
+
+#22 [web build 2/2] RUN npm run build
+#22 0.260 
+#22 0.260 > aprova-me-web@1.0.0 build
+#22 0.260 > next build
+#22 0.260 
+#22 0.811 ▲ Next.js 16.4.3 (Turbopack)
+#22 0.852 ✓ Running next.config.ts took 38ms
+#22 0.866 
+#22 0.899   Creating an optimized production build ...
+#22 8.400 ✓ Compiled successfully in 7.5s
+#22 8.407   Running TypeScript ...
+#22 ...
+
+#19 [api deps 2/2] RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+#19 26.22 
+#19 26.22 added 754 packages, and audited 755 packages in 26s
+#19 26.22 
+#19 26.22 165 packages are looking for funding
+#19 26.22   run `npm fund` for details
+#19 26.41 npm notice
+#19 26.41 npm notice New major version of npm available! 10.9.9 -> 12.2.1
+#19 26.41 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+#19 26.41 npm notice To update run: npm install -g npm@12.2.1
+#19 26.41 npm notice
+#19 26.41 
+#19 26.41 16 vulnerabilities (8 low, 2 moderate, 6 high)
+#19 26.41 
+#19 26.41 To address issues that do not require attention, run:
+#19 26.41   npm audit fix
+#19 26.41 
+#19 26.41 To address all issues (including breaking changes), run:
+#19 26.41   npm audit fix --force
+#19 26.41 
+#19 26.41 Run `npm audit` for details.
+#19 DONE 27.0s
+
+#23 [worker build 1/2] COPY . .
+#23 DONE 0.0s
+
+#24 [worker build 2/2] RUN npx prisma generate && npm run build && npm prune --omit=dev && npx prisma generate
+#24 1.689 Prisma schema loaded from prisma/schema.prisma
+#24 2.022 
+#24 2.022 ✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 106ms
+#24 2.022 
+#24 2.022 Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+#24 2.022 
+#24 2.022 Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+#24 2.022 
+#24 2.189 
+#24 2.189 > aprova-me-api@1.0.0 build
+#24 2.189 > nest build
+#24 2.189 
+#24 ...
+
+#22 [web build 2/2] RUN npm run build
+#22 13.32   Finished TypeScript in 4.9s ...
+#22 13.32   Collecting page data using 3 workers ...
+#22 14.39   Generating static pages using 3 workers (0/8) ...
+#22 14.55   Generating static pages using 3 workers (2/8) 
+#22 14.59   Generating static pages using 3 workers (4/8) 
+#22 14.70   Generating static pages using 3 workers (6/8) 
+#22 14.70 ✓ Generating static pages using 3 workers (8/8) in 310ms
+#22 14.71   Finalizing page optimization ...
+#22 15.05 
+#22 15.06 Route (app)
+#22 15.06 ┌ ○ /
+#22 15.06 ├ ○ /_not-found
+#22 15.06 ├ ƒ /assignors
+#22 15.06 ├ ƒ /assignors/[id]
+#22 15.06 ├ ƒ /assignors/new
+#22 15.06 ├ ƒ /login
+#22 15.06 ├ ƒ /payables
+#22 15.06 ├ ƒ /payables/[id]
+#22 15.06 ├ ƒ /payables/[id]/edit
+#22 15.06 └ ƒ /payables/new
+#22 15.06 
+#22 15.06 
+#22 15.06 ƒ Proxy (Middleware)
+#22 15.06 
+#22 15.06 ○  (Static)   prerendered as static content
+#22 15.06 ƒ  (Dynamic)  server-rendered on demand
+#22 15.06 
+#22 DONE 15.2s
+
+#24 [worker build 2/2] RUN npx prisma generate && npm run build && npm prune --omit=dev && npx prisma generate
+#24 ...
+
+#25 [web runtime 3/4] COPY --from=build --chown=node:node /app/.next/standalone ./
+#25 DONE 0.3s
+
+#24 [worker build 2/2] RUN npx prisma generate && npm run build && npm prune --omit=dev && npx prisma generate
+#24 ...
+
+#26 [web runtime 4/4] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#26 DONE 0.0s
+
+#27 [web] exporting to image
+#27 exporting layers
+#27 exporting layers 0.8s done
+#27 writing image sha256:50aa8a950ccb8de4e420749b0328f01a78a49be87188a1734c071affcaadc381 done
+#27 naming to docker.io/library/aprova-me-web done
+#27 DONE 0.8s
+
+#28 [web] resolving provenance for metadata file
+#28 DONE 0.0s
+
+#24 [worker build 2/2] RUN npx prisma generate && npm run build && npm prune --omit=dev && npx prisma generate
+#24 11.40 
+#24 11.40 up to date, audited 194 packages in 4s
+#24 11.40 
+#24 11.40 55 packages are looking for funding
+#24 11.40   run `npm fund` for details
+#24 11.51 
+#24 11.51 8 vulnerabilities (2 moderate, 6 high)
+#24 11.51 
+#24 11.51 To address issues that do not require attention, run:
+#24 11.51   npm audit fix
+#24 11.51 
+#24 11.51 To address all issues (including breaking changes), run:
+#24 11.51   npm audit fix --force
+#24 11.51 
+#24 11.51 Run `npm audit` for details.
+#24 12.67 Prisma schema loaded from prisma/schema.prisma
+#24 12.85 ┌─────────────────────────────────────────────────────────┐
+#24 12.85 │  Update available 6.19.3 -> 8.0.0-rc.28                 │
+#24 12.85 │                                                         │
+#24 12.85 │  This is a major update - please follow the guide at    │
+#24 12.85 │  https://pris.ly/d/major-version-upgrade                │
+#24 12.85 │                                                         │
+#24 12.85 │  Run the following to update                            │
+#24 12.85 │    npm i --save-dev prisma@latest                       │
+#24 12.85 │    npm i @prisma/client@latest                          │
+#24 12.85 └─────────────────────────────────────────────────────────┘
+#24 12.85 
+#24 12.85 ✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 77ms
+#24 12.85 
+#24 12.85 Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+#24 12.85 
+#24 12.85 Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+#24 12.85 
+#24 DONE 12.9s
+
+#29 [api runtime 1/4] COPY --from=build --chown=node:node /app/node_modules ./node_modules
+#29 DONE 2.6s
+
+#30 [worker runtime 2/4] COPY --from=build --chown=node:node /app/dist ./dist
+#30 DONE 0.0s
+
+#31 [worker runtime 3/4] COPY --from=build --chown=node:node /app/prisma ./prisma
+#31 DONE 0.0s
+
+#32 [api runtime 4/4] COPY --from=build --chown=node:node /app/package.json ./package.json
+#32 DONE 0.0s
+
+#33 [worker] exporting to image
+#33 exporting layers
+#33 exporting layers 3.1s done
+#33 writing image sha256:c66a4655dda010cd01388753495210520b22ded171b6ff4c50b9bbfdf4ff14b1 done
+#33 naming to docker.io/library/aprova-me-worker done
+#33 DONE 3.1s
+
+#34 [api] exporting to image
+#34 exporting layers 3.1s done
+#34 writing image sha256:c66a4655dda010cd01388753495210520b22ded171b6ff4c50b9bbfdf4ff14b1 done
+#34 naming to docker.io/library/aprova-me-api done
+#34 DONE 3.1s
+
+#35 [api] resolving provenance for metadata file
+#35 DONE 0.0s
+
+#36 [worker] resolving provenance for metadata file
+#36 DONE 0.0s
+ worker  Built
+ web  Built
+ api  Built
+ Network aprova-me_default  Creating
+ Network aprova-me_default  Created
+ Volume "aprova-me_postgres-data"  Creating
+ Volume "aprova-me_postgres-data"  Created
+ Volume "aprova-me_redis-data"  Creating
+ Volume "aprova-me_redis-data"  Created
+ Container aprova-me-postgres-1  Creating
+ Container aprova-me-redis-1  Creating
+ Container aprova-me-mailpit-1  Creating
+ Container aprova-me-redis-1  Created
+ Container aprova-me-mailpit-1  Created
+ Container aprova-me-postgres-1  Created
+ Container aprova-me-api-1  Creating
+ Container aprova-me-api-1  Created
+ Container aprova-me-worker-1  Creating
+ Container aprova-me-web-1  Creating
+ Container aprova-me-worker-1  Created
+ Container aprova-me-web-1  Created
+ Container aprova-me-postgres-1  Starting
+ Container aprova-me-redis-1  Starting
+ Container aprova-me-mailpit-1  Starting
+ Container aprova-me-postgres-1  Started
+ Container aprova-me-redis-1  Started
+ Container aprova-me-postgres-1  Waiting
+ Container aprova-me-redis-1  Waiting
+ Container aprova-me-mailpit-1  Started
+ Container aprova-me-postgres-1  Healthy
+ Container aprova-me-redis-1  Healthy
+ Container aprova-me-api-1  Starting
+ Container aprova-me-api-1  Started
+ Container aprova-me-api-1  Waiting
+ Container aprova-me-api-1  Waiting
+ Container aprova-me-api-1  Healthy
+ Container aprova-me-web-1  Starting
+ Container aprova-me-api-1  Healthy
+ Container aprova-me-worker-1  Starting
+ Container aprova-me-worker-1  Started
+ Container aprova-me-web-1  Started
+Aplicação pronta

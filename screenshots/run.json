@@ -1,0 +1,25 @@
+{
+  "batch": {
+    "id": "bdca1878-958d-4309-a2a8-f46fcfdb41ab",
+    "status": "COMPLETED",
+    "total": 2000,
+    "succeeded": 1998,
+    "failed": 2,
+    "pending": 0,
+    "createdAt": "2026-10-29T13:49:01.763Z",
+    "finishedAt": "2026-10-29T13:49:05.160Z",
+    "failures": [
+      {
+        "payableId": "a72d662a-f8d1-4f90-80a0-bf22e2564d41",
+        "attempts": 1,
+        "error": "Cedente cca149a3-ff7e-4d22-bca9-a7b9be46bc14 não encontrado"
+      },
+      {
+        "payableId": "81b95e46-326e-4a33-a6e1-89cf8244593b",
+        "attempts": 1,
+        "error": "Cedente cca149a3-ff7e-4d22-bca9-a7b9be46bc14 não encontrado"
+      }
+    ]
+  },
+  "errors": []
+}
