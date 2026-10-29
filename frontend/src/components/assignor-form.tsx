@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { useActionState, useState, useTransition } from 'react';
 import { initialFormState, type FormState } from '@/lib/form-state';
-import { assignorSchema, validateForm, type FieldErrors } from '@/lib/schemas';
+import { assignorSchema, validateForm } from '@/lib/schemas';
 import { Field } from './field';
 import { FormMessage } from './form-message';
+import { useFieldErrors } from './use-field-errors';
 
 interface AssignorFormProps {
   action: (state: FormState, formData: FormData) => Promise<FormState>;
@@ -42,18 +43,17 @@ export function AssignorForm({ action, returnTo }: AssignorFormProps) {
     phone: '',
     email: '',
   });
-  const [clientErrors, setClientErrors] = useState<FieldErrors | null>(null);
-  const errors = clientErrors ?? state.fieldErrors ?? {};
+  const { errorsFor, markEdited, submitted, hasClientErrors } = useFieldErrors(state.fieldErrors);
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const result = validateForm(assignorSchema, formData);
     if (!result.success) {
-      setClientErrors(result.fieldErrors);
+      submitted(result.fieldErrors);
       return;
     }
-    setClientErrors(null);
+    submitted(null);
     startTransition(() => dispatch(formData));
   }
 
@@ -61,7 +61,7 @@ export function AssignorForm({ action, returnTo }: AssignorFormProps) {
     <form onSubmit={onSubmit} noValidate className="flex flex-col gap-6" aria-label="Cedente">
       <input type="hidden" name="id" value={id} />
       {returnTo && <input type="hidden" name="returnTo" value={returnTo} />}
-      <FormMessage message={clientErrors ? undefined : state.message} />
+      <FormMessage message={hasClientErrors ? undefined : state.message} />
 
       <div className="grid gap-6 sm:grid-cols-2">
         {FIELDS.map((field) => (
@@ -70,7 +70,7 @@ export function AssignorForm({ action, returnTo }: AssignorFormProps) {
               id={field.name}
               label={field.label}
               hint={'hint' in field ? field.hint : undefined}
-              errors={errors[field.name]}
+              errors={errorsFor(field.name)}
             >
               {(props) => (
                 <input
@@ -81,9 +81,10 @@ export function AssignorForm({ action, returnTo }: AssignorFormProps) {
                   maxLength={field.maxLength}
                   className="field-input"
                   value={values[field.name]}
-                  onChange={(event) =>
-                    setValues((current) => ({ ...current, [field.name]: event.target.value }))
-                  }
+                  onChange={(event) => {
+                    setValues((current) => ({ ...current, [field.name]: event.target.value }));
+                    markEdited(field.name);
+                  }}
                   required
                 />
               )}

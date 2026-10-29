@@ -141,7 +141,8 @@ async function shot(page, name, options = {}) {
 
 async function capture() {
   await mkdir(OUT, { recursive: true });
-  const browser = await chromium.launch();
+  // --lang deixa os campos de data no formato brasileiro (dd/mm/aaaa).
+  const browser = await chromium.launch({ args: ['--lang=pt-BR'] });
   const desktop = await browser.newContext({
     viewport: { width: 1280, height: 800 },
     deviceScaleFactor: 2,
@@ -164,6 +165,7 @@ async function capture() {
   await page.getByRole('button', { name: 'Cadastrar recebível' }).click();
   await shot(page, 'validation');
 
+  await page.goto(`${WEB}/payables/new`);
   await page.getByRole('combobox').fill('pão');
   await page.getByRole('listbox').waitFor();
   await shot(page, 'combobox');
@@ -200,10 +202,9 @@ async function capture() {
   });
   const phone = await mobile.newPage();
   await login(phone);
+  await shot(phone, 'mobile-list');
   await phone.goto(`${WEB}/payables/new`);
   await shot(phone, 'mobile-form');
-  await login(phone);
-  await shot(phone, 'mobile-list');
 
   await browser.close();
 }

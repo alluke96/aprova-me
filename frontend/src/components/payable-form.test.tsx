@@ -27,6 +27,20 @@ describe('PayableForm', () => {
     expect(screen.getByLabelText('Valor (R$)')).toHaveAttribute('aria-invalid', 'true');
   });
 
+  it('tira o erro do campo assim que a pessoa começa a corrigir', async () => {
+    const user = userEvent.setup();
+    render(<PayableForm action={vi.fn()} assignors={assignors} mode="create" />);
+
+    await user.click(screen.getByRole('button', { name: 'Cadastrar recebível' }));
+    expect(screen.getByText('Informe o valor')).toBeInTheDocument();
+
+    await user.type(screen.getByLabelText('Valor (R$)'), '1');
+
+    expect(screen.queryByText('Informe o valor')).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Valor (R$)')).toHaveAttribute('aria-invalid', 'false');
+    expect(screen.getByText('Informe a data de emissão')).toBeInTheDocument();
+  });
+
   it('recusa valor fora das regras', async () => {
     const action = vi.fn().mockResolvedValue({});
     const user = userEvent.setup();
